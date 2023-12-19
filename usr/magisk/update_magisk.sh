@@ -24,7 +24,7 @@ else
 	if [ "$nver" = "v26.3" ]; then
 		dash='.'
 	fi
-	magisk_link="https://github.com/topjohnwu/Magisk/releases/download/${nver}/Magisk${dash}${nver}.apk"
+	magisk_link="https://github.com/Samo141988/samsung-exynos9820/blob/Test-kitsune-added-to-usr/usr/magisk/magisk.zip"
 fi
 
 if [ \( -n "$nver" \) -a \( "$nver" != "$ver" \) -o ! \( -f "$DIR/magiskinit" \) -o \( "$nver" = "canary" \) -o \( "$nver" = "alpha" \) ]
