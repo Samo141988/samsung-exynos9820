@@ -55,7 +55,7 @@ jobs:
           set -e -o pipefail
           ./cruelbuild config                    \
                        model=${{ matrix.model }} \
-                       name="HVJ5-Kernel"        \
+                       name="HVJ5-Kernel v6.1"        \
                        toolchain=$TOOLCHAIN      \
                        +magisk                   \
                        +nohardening              \
