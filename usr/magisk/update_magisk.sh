@@ -18,7 +18,7 @@ then
 else
 	dash='-'
 	if [ "x$1" = "x" ]; then
-		nver="$(curl -s https://github.com/Samo141988/Kitsune/releases | grep -m 1 -Poe 'Kitsune v[\d\.]+' | cut -d ' ' -f 2)"
+		nver="$(curl -s https://github.com/Samo141988/Kitsune/releases | grep -m 1 -Poe 'Magisk v[\d\.]+' | cut -d ' ' -f 2)"
 	else
 		nver="$1"
 	fi
