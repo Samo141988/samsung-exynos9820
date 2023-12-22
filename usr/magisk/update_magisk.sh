@@ -25,7 +25,7 @@ else
 	if [ "$nver" = "v26.4" ]; then
 		dash='.'
 	fi
-	magisk_link="https://github.com/Samo141988/Kitsune/releases/download/Kitsune/${nver}/Magisk${dash}${nver}.apk"
+	magisk_link="https://github.com/Samo141988/Kitsune/releases/download/Kitsune/Magisk${dash}${nver}.apk"
                     #https://github.com/topjohnwu/Magisk/releases/download/${nver}
 fi
 
