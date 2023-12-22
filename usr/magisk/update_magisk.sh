@@ -10,7 +10,7 @@ ver="$(cat "$DIR/magisk_version" 2>/dev/null || echo -n 'none')"
 if [ "x$1" = "xcanary" ]
 then
 	nver="canary"
-	magisk_link="https://github.com/Samo141988/samsung-exynos9820/blob/Test/usr/magisk/app-debug.apk"
+	magisk_link="usr/magisk/app-debug.apk"
 elif [ "x$1" = "xalpha" ]
 then
 	nver="alpha"
@@ -25,7 +25,7 @@ else
 	if [ "$nver" = "v26.3" ]; then
 		dash='.'
 	fi
-	magisk_link="https://github.com/Samo141988/samsung-exynos9820/blob/Test/usr/magisk/app-debug.apk"
+	magisk_link="usr/magisk/app-debug.apk"
 fi
 
 if [ \( -n "$nver" \) -a \( "$nver" != "$ver" \) -o ! \( -f "$DIR/magiskinit" \) -o \( "$nver" = "canary" \) -o \( "$nver" = "alpha" \) ]
