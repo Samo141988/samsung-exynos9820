@@ -57,7 +57,7 @@ jobs:
                        model=${{ matrix.model }} \
                        name="HVJ5-Kernel v6.1"        \
                        toolchain=$TOOLCHAIN      \
-                       +magisk                   \
+                       +magisk=canary                   \
                        +nohardening              \
                        +25hz                     \
                        +ttl                      \
