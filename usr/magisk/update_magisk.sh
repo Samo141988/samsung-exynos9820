@@ -22,7 +22,7 @@ else
 	else
 		nver="$1"
 	fi
-	if [ "$nver" = "v26.3" ]; then
+	if [ "$nver" = "v26.4" ]; then
 		dash='.'
 	fi
 	magisk_link="https://github.com/Samo141988/Kitsune/releases/download/Kitsune/Magisk-v26.4.apk"
