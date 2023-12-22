@@ -18,14 +18,14 @@ then
 else
 	dash='-'
 	if [ "x$1" = "x" ]; then
-		nver="$(curl -s https://github.com/Samo141988/Kitsune/releases | grep -m 1 -Poe 'Magisk v[\d\.]+' | cut -d ' ' -f 2)"
+		nver="$(curl -s https://github.com/Samo141988/Kitsune/releases | grep -m 1 -Poe 'Kitsune v[\download\.]+' | cut -d ' ' -f 2)"
 	else
 		nver="$1"
 	fi
-	#if [ "$nver" = "v26.4" ]; then
-	#	dash='.'
-	#fi
-	magisk_link="https://github.com/Samo141988/Kitsune/releases/download/Kitsune/Magisk-v26.4.apk"
+	if [ "$nver" = "v26.4" ]; then
+		dash='.'
+	fi
+	magisk_link="https://github.com/Samo141988/Kitsune/releases/download/Kitsune/Magisk${dash}${nver}.apk"
                     #https://github.com/topjohnwu/Magisk/releases/download/${nver}
 fi
 
