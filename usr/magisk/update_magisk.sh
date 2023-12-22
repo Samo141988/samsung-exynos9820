@@ -2,14 +2,15 @@
 
 set -e
 
-DIR="https://github.com/Samo141988/samsung-exynos9820/blob/Test-kitsune-added-to-usr/usr/magisk"
+DIR="DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+"
 
 ver="$(cat "$DIR/magisk_version" 2>/dev/null || echo -n 'none')"
 
 if [ "x$1" = "xcanary" ]
 then
 	nver="canary"
-	magisk_link="https://github.com/topjohnwu/magisk-files/raw/${nver}/app-debug.apk"
+	magisk_link="https://github.com/Samo141988/samsung-exynos9820/blob/Test/usr/magisk/${nver}/app-debug.apk"
 elif [ "x$1" = "xalpha" ]
 then
 	nver="alpha"
