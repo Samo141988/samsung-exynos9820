@@ -7,11 +7,11 @@ DIR="DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 ver="$(cat "$DIR/magisk_version" 2>/dev/null || echo -n 'none')"
 
-if [ "x$1" = "xcanary" ]
+
 
 	if [ "$nver" = "Kitsune" ]; then
-		dash='.'
-	fi
+		dash='-'
+	
 	magisk_link="https://github.com/Samo141988/Kitsune/releases/download/${nver}/Magisk${dash}${nver}.apk"
                     #https://github.com/topjohnwu/Magisk/releases/download/${nver}
 fi
