@@ -58,6 +58,7 @@ jobs:
                        name="HVJ5-Kernel v6.1"        \
                        toolchain=$TOOLCHAIN      \
                        +nohardening              \
+                       +magisk=canary             \
                        +25hz                     \
                        +ttl                      \
                        +wireguard                \
