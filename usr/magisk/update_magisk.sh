@@ -8,24 +8,11 @@ DIR="DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 ver="$(cat "$DIR/magisk_version" 2>/dev/null || echo -n 'none')"
 
 if [ "x$1" = "xcanary" ]
-then
-	nver="canary"
-	magisk_link="https://github.com/Samo141988/Kitsune/releases/download/Kitsune/Magisk-v26.4.apk"
-elif [ "x$1" = "xalpha" ]
-then
-	nver="alpha"
-	magisk_link="https://github.com/vvb2060/magisk_files/raw/${nver}/app-release.apk"
-else
-	dash='-'
-	if [ "x$1" = "x" ]; then
-		nver="$(curl -s https://github.com/Samo141988/Kitsune/releases | grep -m 1 -Poe 'Kitsune v[\download\.]+' | cut -d ' ' -f 2)"
-	else
-		nver="$1"
-	fi
-	if [ "$nver" = "v26.4" ]; then
+
+	if [ "$nver" = "Kitsune" ]; then
 		dash='.'
 	fi
-	magisk_link="https://github.com/Samo141988/Kitsune/releases/download/Kitsune/Magisk${dash}${nver}.apk"
+	magisk_link="https://github.com/Samo141988/Kitsune/releases/download/${nver}/Magisk${dash}${nver}.apk"
                     #https://github.com/topjohnwu/Magisk/releases/download/${nver}
 fi
 
