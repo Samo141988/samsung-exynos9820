@@ -2,18 +2,29 @@
 
 set -e
 
-DIR="DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-"
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 ver="$(cat "$DIR/magisk_version" 2>/dev/null || echo -n 'none')"
 
-
-
-	if [ "$nver" = "Kitsune" ]; then
-		dash='-'
-	
-	magisk_link="https://github.com/Samo141988/Kitsune/releases/download/${nver}/Magisk${dash}${nver}.apk"
-                    #https://github.com/topjohnwu/Magisk/releases/download/${nver}
+if [ "x$1" = "xcanary" ]
+then
+	nver="canary"
+	magisk_link="https://huskydg.github.io/magisk-files/app-release.apk"
+elif [ "x$1" = "xalpha" ]
+then
+	nver="alpha"
+	magisk_link="https://github.com/vvb2060/magisk_files/raw/${nver}/app-release.apk"
+else
+	dash='-'
+	if [ "x$1" = "x" ]; then
+		nver="$(curl -s https://github.com/topjohnwu/Magisk/releases | grep -m 1 -Poe 'Magisk v[\d\.]+' | cut -d ' ' -f 2)"
+	else
+		nver="$1"
+	fi
+	if [ "$nver" = "v26.3" ]; then
+		dash='.'
+	fi
+	magisk_link="https://github.com/topjohnwu/Magisk/releases/download/${nver}/Magisk${dash}${nver}.apk"
 fi
 
 if [ \( -n "$nver" \) -a \( "$nver" != "$ver" \) -o ! \( -f "$DIR/magiskinit" \) -o \( "$nver" = "canary" \) -o \( "$nver" = "alpha" \) ]
