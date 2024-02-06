@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 
+
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 ver="$(cat "$DIR/magisk_version" 2>/dev/null || echo -n 'none')"
